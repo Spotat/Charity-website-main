@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="MobileOptimization" content="320">
     <title>Child support</title>
     <link rel="stylesheet" href="./static/files/style/style.css">
     <link rel="stylesheet" href="./static/files/assets/fontawesome-free-6.5.2-web/css/all.css">
     <link rel="stylesheet" href="./static/files/style/mobile.css">
+    <script src="./static/files/scripts/script.js"></script>
 </head> 
 <body>
     <section class="hero-section">
-        <!-- <img src="./static/files/assets/main-slide1.jpg" alt=""> -->
         <div class="container nav-overlay">
             <div class="header">
                 <div class="logo">
                     <h2><span>CH</span>support</h2>
                     <p>Changing the lives of orphans</p>
                 </div>
-                <nav class="navbar">
+                <nav class="navbar" id="sideNav">
                     <div class="primary-nav">
                         <div class="info">
                             <i class="fa fa-envelope"></i>
@@ -44,8 +45,9 @@
                             <a href="#" class="fa-brands fa-facebook"></a>
                             <a href="#" class="fa-brands fa-youtube"></a></div>
                     </div>
+                    <span class="navClose" onclick="closeNav()">&times</span>
                 </nav>
-                <span class="openNav fa fa-bars"></span>
+                <span class="openNav" onclick="openNav()">&#9776</span>
             </div>
             <div class="slider">
                 <h2>Make a big difference by small effort</h2>

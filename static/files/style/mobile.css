@@ -2,6 +2,9 @@
     * {
         line-height: 2;
     }
+    body {
+        overflow-x: hidden;
+    }
     .hero-section {
         height: 70vh;
     }
@@ -13,6 +16,32 @@
     }
     .header {
         grid-template-columns: repeat(2, 1fr);
+    }
+    #sideNav {
+        position: absolute;
+        height: 100vh;
+        min-height: 100%;
+        top: 0;
+        left: -20px;
+        width: 0%;
+        z-index: -99;
+        display: flex;
+        visibility: hidden;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        flex-direction: column;
+        z-index: 99;
+    }
+    .header > .openNav {
+        display: block;
+    }
+    #sideNav > .navClose {
+        display: block;
+    }
+    .nav-links > a {
+        color: black;
+        font-size: 1em;
     }
     .logo > h2 {
         font-size: 20px;

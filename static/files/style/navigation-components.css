@@ -8,7 +8,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    filter: brightness(60%) saturate(40%) sepia(30%);
+    filter: brightness(60%) sepia(30%);
 }
 .hero-section > .nav-overlay {
     position: absolute;
@@ -28,6 +28,28 @@
     grid-template-columns: 1fr 4fr;
     background: var(--color-bg);
     letter-spacing: 1px;
+}
+.header > .openNav {
+    color: black;
+    font-size: 17px;
+    padding: 10px;
+    border: none;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    display: none;
+    cursor: pointer;
+    user-select: none;
+}
+.navbar > .navClose {
+    color: black;
+    font-size: 20px;
+    top: 20px;
+    right: 20px;
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
 }
 .logo {
     display: flex;
@@ -319,10 +341,10 @@ footer {
 
 @media (max-width: 578px) {
     .hero-section {
-        height: 70vh;
+        height: 100%;
     }
     .nav-overlay {
-        margin-top: 10px;
+        margin-top: 0;
     }
     .container {
         width: 90%;
@@ -331,11 +353,34 @@ footer {
         grid-template-columns: 1fr;
         position: relative;
     }
-    .header > .openNav {
+    .header {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #sideNav {
         position: absolute;
-        font-size: 70px;
+        height: 100vh;
+        min-height: 100%;
         top: 0;
-        right: 0;
+        left: -20px;
+        width: 0%;
+        z-index: -99;
+        display: flex;
+        visibility: hidden;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        flex-direction: column;
+        z-index: 99;
+    }
+    .header > .openNav {
+        display: block;
+    }
+    #sideNav > .navClose {
+        display: block;
+    }
+    #sideNav > a {
+        color: var(--color-secondary);
+        font-size: 1em;
     }
     .logo > h2 {
         font-size: 20px;
@@ -363,7 +408,7 @@ footer {
     }
     .slider > h2 {
         font-size: 2em;
-        font-weight: 600;
+        font-weight: 500;
     }
     .slider > p {
         width: 100%;
