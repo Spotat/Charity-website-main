@@ -35,3 +35,14 @@ function closeNav() {
     document.getElementById("sideNav").style.zIndex = "-99"
     document.getElementById("sideNav").style.visibility = "hidden"
 }
+
+document.getElementById('volunteerBtn').addEventListener('click', () => {
+  document.getElementById('volunteerModal').classList.remove('hidden');
+});
+
+function closeModal() {
+  document.getElementById('volunteerModal').classList.add('hidden');
+}
+document.getElementById('modalClose').addEventListener('click', () => {
+  document.getElementById('volunteerModal').classList.add('hidden');
+}); 
